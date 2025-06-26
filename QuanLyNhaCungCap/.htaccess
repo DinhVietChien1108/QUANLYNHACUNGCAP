@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /QuanLyNhaCungCap/
+
+# Exclude existing files and directories from rewrite rules
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php
+RewriteRule ^(.*)$ index.php [L,QSA]
